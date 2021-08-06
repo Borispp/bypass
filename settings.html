@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta charset="UTF-8">
+  <title>Settings: ByPass</title>
+  <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
+  <link href="assets/libs/jquery-ui/themes/base/datepicker.css" rel="stylesheet" />
+  <link href="assets/libs/select2/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="assets/styles/svg.css" rel="stylesheet" type="text/css">
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <link rel="icon" type="icon" href="assets/images/content/fav.png">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id="wrapper">
+    <header id="header" class="-account">
+      <a href="#testPopup" id="logo" class="popupopen"></a>
+
+      <ul class="header--menu">
+        <li><a href="#testPopup" class="popupopen">ABOUT</a></li>
+        <li><a href="#testPopup" class="popupopen">FAQ</a></li>
+        <li><a href="#testPopup" class="popupopen">CONTACTS</a></li>
+      </ul>
+
+      <div class="login--buttons">
+        <a href="#testPopup" class="button -icon -logout popupopen">Logout</a>
+      </div>
+
+      <div class="login--settings">
+        <span class="login--avatar" style="background-image: url('./assets/images/content/leo.png')"></span>
+        <a href="" class="login--email">Difiz.com@gmail.com</a>
+        <ul class="popup_menu">
+          <li><a href="#">Profile Settings</a></li>
+          <li><a href="#">Voip Settings</a></li>
+          <li><a href="#">Sms Settings</a></li>
+          <li><a href="#">Statistics</a></li>
+          <li><a href="#">Start Voip Test</a></li>
+          <li><a href="#">Start Sms Test</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="info_preview -settings">
+      <div id="imagebg" class=""></div>
+      <div class="overlay"></div>
+
+      <div class="info_preview--links">
+        <a href="#">
+          <div class="info_preview--content">
+            <span class="info_preview--icon -voip"></span>
+            <h2>VOIP Test</h2>
+            <p class="info_preview--description">TEST your suppliers for CLI, FAS, OTT and DTMF.<br>Many others developing right now! </p>
+            <p><span class="button -large">Start VOIP Test</span></p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="info_preview--content">
+            <span class="info_preview--icon -sms_test"></span>
+            <h2>SMS Test</h2>
+            <p class="info_preview--description">Need to be sure your sms delivered in time and end user can read it?<br> Yes we do support!</p>
+            <p><span class="button -large">Start SMS Test</span></p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <ul class="footer--menu">
+        <li><a href="#testPopup" class="popupopen">ABOUT</a></li>
+        <li><a href="#testPopup" class="popupopen">FAQ</a></li>
+        <li><a href="#testPopup" class="popupopen">CONTACTS</a></li>
+      </ul>
+
+      <div class="footer--logo">
+        <img src="./assets/images/content/logo.png" alt="" width="47">
+        <p>© 2011-2015 ByPass Systems <br> All rights reserved</p>
+      </div>
+
+      <a href="http://difiz.com" class="footer--difiz">Design by <span>www.difiz.com</span></a>
+    </footer>
+  </div>
+
+  <div class="popup -popuphide" id="testPopup">
+    <a href="#" class="close"></a>
+    <div>
+      <h2>Coming soon</h2>
+      <p>We will soon open</p>
+    </div>
+  </div>
+
+  <div id="overlay" class="-hide"></div>
+  <div id="overlay_white" class="-hide"></div>
+  <div id="report"></div>
+
+  <!-- Libs -->
+  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+  <script src="assets/libs/select2/dist/js/select2Mod.min.js"></script>
+	<script src="assets/libs/datatables/media/js/jquery.dataTables.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="assets/scripts/selectTags.js"></script>
+  <script src="assets/scripts/main.js"></script>
+  <script src="assets/scripts/combobox.js"></script>
+  <script src="assets/scripts/countriesPopup.js"></script>
+
+  <script language="JavaScript">
+    $.datepicker.regional['en'] = {
+      closeText: 'Close',
+      currentText: 'Today',
+      done: 'Select',
+      // monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+      // monthNamesShort: ['янв','фев','мар','апр','май','июн', 'июл','авг','сен','окт','ноя','дек'],
+      dateFormatFrom: 'd M',
+      dateFormat: 'd M, yy',
+      firstDay: 1,
+      isRTL: false,
+      changeDate: function (date) {
+        console.log(date);
+      }
+    };
+    $.datepicker.setDefaults($.datepicker.regional['en']);
+
+
+  </script>
+
+  <script src="assets/scripts/datepicker.js"></script>
+
+  <script>
+
+    [].forEach.call($('.audio'), function (el) {
+
+      var $el = $(el);
+      var id = $el.data('id');
+      var color = $el.data('color');
+      var progress = $el.data('progress');
+      var audio = $el.data('audio');
+
+      var wavesurfer = WaveSurfer.create({
+        container: id,
+        waveColor: color,
+        progressColor: progress,
+        barWidth: '1',
+        height: '30',
+        cursorWidth: '0'
+      });
+
+      wavesurfer.on('finish', function () {
+        wavesurfer.stop();
+      });
+
+      wavesurfer.load(audio);
+
+      $el.find('a').on('click', function () {
+        wavesurfer.play();
+      });
+    });
+  </script>
+</body>
+</html>

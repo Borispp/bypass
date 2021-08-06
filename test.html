@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta charset="UTF-8">
+  <title>Test: ByPass</title>
+  <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
+  <link href="assets/libs/jquery-ui/themes/base/datepicker.css" rel="stylesheet" />
+  <link href="assets/libs/select2/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="assets/styles/svg.css" rel="stylesheet" type="text/css">
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <link rel="icon" type="icon" href="assets/images/content/fav.png">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body class="-account">
+  <div id="wrapper">
+    <header id="header" class="-account">
+      <a href="#testPopup" id="logo" class="popupopen"></a>
+
+      <ul class="header--menu">
+        <li><a href="#testPopup" class="popupopen">ABOUT</a></li>
+        <li><a href="#testPopup" class="popupopen">FAQ</a></li>
+        <li><a href="#testPopup" class="popupopen">CONTACTS</a></li>
+      </ul>
+
+      <div class="login--buttons">
+        <a href="#testPopup" class="button -icon -logout popupopen">Logout</a>
+      </div>
+
+      <div class="login--settings">
+        <span class="login--avatar" style="background-image: url('./assets/images/content/leo.png')"></span>
+        <a href="" class="login--email">Difiz.com@gmail.com</a>
+      </div>
+    </header>
+
+    <header id="login_stats">
+      <div class="base_col">
+
+        <ul class="login_stats--test">
+          <li>
+            <span class="stats--headline -cli">CLI Tests:</span>
+            <div class="progressbar">
+              <em>400/1000</em>
+              <p><span style="width: 40%;" class="-medium"></span></p>
+            </div>
+          </li>
+          <li>
+            <span class="stats--headline -bypass">ByPass Tests:</span>
+            <div class="progressbar">
+              <em>900/1000</em>
+              <p><span style="width: 90%;" class="-full"></span></p>
+            </div>
+          </li>
+          <li>
+            <span class="stats--headline -mos">MOS Tests:</span>
+            <div class="progressbar">
+              <em>150/1000</em>
+              <p><span style="width: 15%;" class="-low"></span></p>
+            </div>
+          </li>
+          <li>
+            <span class="stats--headline -sms">SMS Tests:</span>
+            <div class="progressbar">
+              <em>1/1000</em>
+              <p><span style="width: 0.1%;" class="-low"></span></p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="login_stats--controls">
+          <a href="#" class="button2 -statistics">Statistics</a>
+          <a href="#" class="button2 -settings"></a>
+        </div>
+      </div>
+    </header>
+
+    <section class="common tests">
+      <div class="base_col">
+        <header class="tests_header">
+          <a href="#" class="icon -voip -active"><span>VOIP Test</span></a>
+          <h1>
+            <span>START YOUR VOIP TEST</span>
+            <p>Select your test type and input your settings:</p>
+          </h1>
+          <a href="#" class="icon -sms"><span>Start SMS Test</span></a>
+        </header>
+
+
+        <div class="test_buttons">
+          <div class="radio_buttons -radio_controls">
+            <p>
+              <input type="checkbox" class="radio_button" id="val1" name="test_id1" checked>
+              <label for="val1">Test CLI</label>
+            </p>
+
+            <p>
+              <input type="checkbox" class="radio_button" id="val2" name="test_id1">
+              <label for="val2">BiPass Test</label>
+            </p>
+
+            <p>
+              <input type="checkbox" class="radio_button" id="val3" name="test_id1">
+              <label for="val3">MOS Test</label>
+            </p>
+
+            <p>
+              <input type="checkbox" id="run_all_id1" name="test_id1" class="run_all">
+              <label for="run_all_id1">Run all</label>
+            </p>
+          </div>
+        </div>
+
+        <div class="test_block">
+          <div class="destination">
+            <label for="" class="label -white -small_padding">Choose destination</label>
+            <div class="ui-widget combobox" style="width: 300px">
+              <select class="comboboxselect cities" data-popup="#livesearch" placeholder="Add a supplier...">
+                <option value=""></option>	<option value="1">Afghan Telecom</option>
+              	<option value="1">MTN Afghanistan </option>
+              	<option value="2">Roshan</option>
+              	<option value="3">Afghan Wireless</option>
+              	<option value="4">Etisalat Afghanistan </option>
+              	<option value="5">MSTelcom</option>
+              	<option value="6">Angola Telecom </option>
+              	<option value="7">Movicel</option>
+              	<option value="8">Unitel</option>
+              	<option value="9">Setar</option>
+              	<option value="10">Setar Mobile </option>
+              	<option value="11">Digicel</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="supplier">
+            <label for="" class="label -white -small_padding">Choose destination</label>
+            <select class="selectmultiply" data-popup="#livesearch" data-selectMult="id1" placeholder="Add a supplier..." multiple>
+              <optgroup label="Afghanistan">
+                <option value="Afghan Telecom">Afghan Telecom</option>
+                <option value="MTN Afghanistan">MTN Afghanistan </option>
+                <option value="Roshan">Roshan</option>
+                <option value="Afghan Wireless">Afghan Wireless</option>
+                <option value="Etisalat Afghanistan">Etisalat Afghanistan </option>
+              </optgroup>
+
+              <optgroup label="Angola">
+                <option value="MSTelcom">MSTelcom</option>
+                <option value="Angola Telecom">Angola Telecom </option>
+                <option value="Movicel">Movicel</option>
+                <option value="Unitel">Unitel</option>
+              </optgroup>
+
+              <optgroup label="Aruba">
+                <option value="Setar">Setar</option>
+                <option value="Setar Mobile">Setar Mobile </option>
+                <option value="Digicel">Digicel</option>
+              </optgroup>
+
+              <optgroup label="Argentina">
+                <option value="Telecom Argentina">Telecom Argentina</option>
+                <option value="Telefonica Argentina">Telefonica Argentina</option>
+                <option value="Personal">Personal</option>
+                <option value="Claro">Claro</option>
+                <option value="Movistar">Movistar</option>
+              </optgroup>
+
+              <optgroup label="Albania">
+                <option value="Neofone">Neofone</option>
+                <option value="Albtelecom">Albtelecom</option>
+                <option value="Abcom">Abcom</option>
+                <option value="Tring Communications">Tring Communications</option>
+                <option value="Primo Communications">Primo Communications</option>
+                <option value="AMC">AMC</option>
+                <option value="Vodafone Albania">Vodafone Albania</option>
+                <option value="Eagle Mobile">Eagle Mobile</option>
+                <option value="Mobile 4 Al">Mobile 4 Al</option>
+              </optgroup>
+
+              <optgroup label="Anguilla">
+                <option value="Digicel">Digicel</option>
+                <option value="Weblinks">Weblinks </option>
+              </optgroup>
+
+              <optgroup label="Algeria">
+                <option value="Algérie Télécom">Algérie Télécom</option>
+                <option value="Mobilis">Mobilis</option>
+                <option value="Djezzy">Djezzy</option>
+                <option value="Nedjma">Nedjma</option>
+              </optgroup>
+
+              <optgroup label="Algeria">
+                <option value="Telstra">Telstra</option>
+                <option value="Soul">Soul</option>
+                <option value="BEST">BEST</option>
+                <option value="AAPT">AAPT</option>
+                <option value="Optus">Optus</option>
+                <option value="Primus">Primus</option>
+                <option value="Telnetwoks">Telnetwoks</option>
+                <option value="Telstra Mobile">Telstra Mobile</option>
+                <option value="Optus Mobile">Optus Mobile</option>
+                <option value="Vodafone Australia">Vodafone Australia</option>
+                <option value="Hello Mobile">Hello Mobile</option>
+                <option value="Savvytel">Savvytel</option>
+                <option value="Crazy John's">Crazy John's</option>
+                <option value="Lebara Mobile">Lebara Mobile</option>
+                <option value="Virgin Mobile Australia">Virgin Mobile Australia</option>
+                <option value="Soul">Soul</option>
+                <option value="Primus">Primus</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="clearfix"></div>
+
+          <label for="" class="label -white -small_padding" style="position: absolute; margin-top: -30px;">Choose number of tests</label>
+          <div class="slider" data-options='{"value": 5, "min": 1, "max": 10, "step": 1}'></div>
+          <div class="slider_values"></div>
+
+          <a href="#" class="add_test">Add another test</a>
+
+          <p class="run_test">
+            <a href="#" class="button -orange -big -arrow">Run test</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <ul class="footer--menu">
+        <li><a href="#testPopup" class="popupopen">ABOUT</a></li>
+        <li><a href="#testPopup" class="popupopen">FAQ</a></li>
+        <li><a href="#testPopup" class="popupopen">CONTACTS</a></li>
+      </ul>
+
+      <div class="footer--logo">
+        <img src="./assets/images/content/logo.png" alt="" width="47">
+        <p>© 2011-2015 ByPass Systems <br> All rights reserved</p>
+      </div>
+
+      <a href="http://difiz.com" class="footer--difiz">Design by <span>www.difiz.com</span></a>
+    </footer>
+  </div>
+
+
+  <div class="popup -white -large -popuphide" id="livesearch">
+    <a href="#" class="close_white"></a>
+    <div class="content">
+      <headline>
+        <h3 class="headline">Select a suplier from list: </h3>
+
+        <form action="">
+          <p class="search"><input type="text" placeholder="Search suplier" id="searchOperator"></p>
+        </form>
+      </headline>
+
+      <section class="countries grid">
+        <ul>
+          <li><h4 data-id="Afghanistan">Afghanistan</h4></li>
+          <li><a href="#" data-id="Afghanistan">Afghan Telecom</a></li>
+          <li><a href="#" data-id="Afghanistan">MTN Afghanistan </a></li>
+          <li><a href="#" data-id="Afghanistan">Roshan</a></li>
+          <li><a href="#" data-id="Afghanistan">Afghan Wireless</a></li>
+          <li><a href="#" data-id="Afghanistan">Etisalat Afghanistan </a></li>
+          <li><h4 data-id="Angola">Angola</h4></li>
+          <li><a href="#" data-id="Angola">MSTelcom</a></li>
+          <li><a href="#" data-id="Angola">Angola Telecom </a></li>
+          <li><a href="#" data-id="Angola">Movicel</a></li>
+          <li><a href="#" data-id="Angola">Unitel</a></li>
+          <li><h4 data-id="Aruba">Aruba</h4></li>
+          <li><a href="#" data-id="Aruba">Setar</a></li>
+          <li><a href="#" data-id="Aruba">Setar Mobile </a></li>
+          <li><a href="#" data-id="Aruba">Digicel</a></li>
+          <li><h4 data-id="Argentina">Argentina</h4></li>
+          <li><a href="#" data-id="Argentina">Telecom Argentina</a></li>
+          <li><a href="#" data-id="Argentina">Telefonica Argentina</a></li>
+          <li><a href="#" data-id="Argentina">Personal</a></li>
+          <li><a href="#" data-id="Argentina">Claro</a></li>
+          <li><a href="#" data-id="Argentina">Movistar</a></li>
+        </ul>
+        <ul>
+          <li><h4 data-id="Albania">Albania</h4></li>
+          <li><a href="#" data-id="Albania">Neofone</a></li>
+          <li><a href="#" data-id="Albania">Albtelecom</a></li>
+          <li><a href="#" data-id="Albania">Abcom</a></li>
+          <li><a href="#" data-id="Albania">Tring Communications</a></li>
+          <li><a href="#" data-id="Albania">Primo Communications</a></li>
+          <li><a href="#" data-id="Albania">AMC</a></li>
+          <li><a href="#" data-id="Albania">Vodafone Albania</a></li>
+          <li><a href="#" data-id="Albania">Eagle Mobile</a></li>
+          <li><a href="#" data-id="Albania">Mobile 4 Al</a></li>
+          <li><h4 data-id="Anguilla">Anguilla</h4></li>
+          <li><a href="#" data-id="Anguilla">Digicel</a></li>
+          <li><a href="#" data-id="Anguilla">Weblinks </a></li>
+          <li><h4 data-id="Algeria">Algeria</h4></li>
+          <li><a href="#" data-id="Algeria">Algérie Télécom</a></li>
+          <li><a href="#" data-id="Algeria">Mobilis</a></li>
+          <li><a href="#" data-id="Algeria">Djezzy</a></li>
+          <li><a href="#" data-id="Algeria">Nedjma</a></li>
+        </ul>
+        <ul>
+          <li><h4 data-id="Australia">Australia</h4></li>
+          <li><a href="#" data-id="Australia">Telstra</a></li>
+          <li><a href="#" data-id="Australia">Soul</a></li>
+          <li><a href="#" data-id="Australia">BEST</a></li>
+          <li><a href="#" data-id="Australia">AAPT</a></li>
+          <li><a href="#" data-id="Australia">Optus</a></li>
+          <li><a href="#" data-id="Australia">Primus</a></li>
+          <li><a href="#" data-id="Australia">Telnetwoks</a></li>
+          <li><a href="#" data-id="Australia">Telstra Mobile</a></li>
+          <li><a href="#" data-id="Australia">Optus Mobile</a></li>
+          <li><a href="#" data-id="Australia">Vodafone Australia</a></li>
+          <li><a href="#" data-id="Australia">Hello Mobile</a></li>
+          <li><a href="#" data-id="Australia">Savvytel</a></li>
+          <li><a href="#" data-id="Australia">Crazy John's</a></li>
+          <li><a href="#" data-id="Australia">Lebara Mobile</a></li>
+          <li><a href="#" data-id="Australia">Virgin Mobile Australia</a></li>
+          <li><a href="#" data-id="Australia">Soul</a></li>
+          <li><a href="#" data-id="Australia">Primus</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div id="overlay" class="-hide"></div>
+  <div id="overlay_white" class="-hide"></div>
+  <div id="report"></div>
+
+  <!-- Libs -->
+  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+  <script src="assets/libs/select2/dist/js/select2Mod.min.js"></script>
+	<script src="assets/libs/datatables/media/js/jquery.dataTables.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="assets/scripts/selectTags.js"></script>
+  <script src="assets/scripts/main.js"></script>
+  <script src="assets/scripts/combobox.js"></script>
+  <script src="assets/scripts/countriesPopup.js"></script>
+
+  <script language="JavaScript">
+    $.datepicker.regional['en'] = {
+      closeText: 'Close',
+      currentText: 'Today',
+      done: 'Select',
+      // monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+      // monthNamesShort: ['янв','фев','мар','апр','май','июн', 'июл','авг','сен','окт','ноя','дек'],
+      dateFormatFrom: 'd M',
+      dateFormat: 'd M, yy',
+      firstDay: 1,
+      isRTL: false,
+      changeDate: function (date) {
+        console.log(date);
+      }
+    };
+    $.datepicker.setDefaults($.datepicker.regional['en']);
+
+
+  </script>
+
+  <script src="assets/scripts/datepicker.js"></script>
+
+  <script>
+
+    [].forEach.call($('.audio'), function (el) {
+
+      var $el = $(el);
+      var id = $el.data('id');
+      var color = $el.data('color');
+      var progress = $el.data('progress');
+      var audio = $el.data('audio');
+
+      var wavesurfer = WaveSurfer.create({
+        container: id,
+        waveColor: color,
+        progressColor: progress,
+        barWidth: '1',
+        height: '30',
+        cursorWidth: '0'
+      });
+
+      wavesurfer.on('finish', function () {
+        wavesurfer.stop();
+      });
+
+      wavesurfer.load(audio);
+
+      $el.find('a').on('click', function () {
+        wavesurfer.play();
+      });
+    });
+  </script>
+</body>
+</html>

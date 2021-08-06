@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta charset="UTF-8">
+  <title>VOIP Settings: ByPass</title>
+  <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
+  <link href="assets/libs/jquery-ui/themes/base/datepicker.css" rel="stylesheet" />
+  <link href="assets/libs/select2/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="assets/styles/svg.css" rel="stylesheet" type="text/css">
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <link rel="icon" type="icon" href="assets/images/content/fav.png">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body class="-account">
+  <div id="wrapper">
+    <header id="header" class="-account">
+      <a href="#testPopup" id="logo" class="popupopen"></a>
+
+      <ul class="header--menu">
+        <li><a href="#testPopup" class="popupopen">ABOUT</a></li>
+        <li><a href="#testPopup" class="popupopen">FAQ</a></li>
+        <li><a href="#testPopup" class="popupopen">CONTACTS</a></li>
+      </ul>
+
+      <div class="login--buttons">
+        <a href="#testPopup" class="button -icon -logout popupopen">Logout</a>
+      </div>
+
+      <div class="login--settings">
+        <span class="login--avatar" style="background-image: url('./assets/images/content/leo.png')"></span>
+        <a href="" class="login--email">Difiz.com@gmail.com</a>
+      </div>
+    </header>
+
+    <header id="login_stats">
+      <div class="base_col">
+
+        <ul class="login_stats--test">
+          <li>
+            <span class="stats--headline -cli">CLI Tests:</span>
+            <div class="progressbar">
+              <em>400/1000</em>
+              <p><span style="width: 40%;" class="-medium"></span></p>
+            </div>
+          </li>
+          <li>
+            <span class="stats--headline -bypass">ByPass Tests:</span>
+            <div class="progressbar">
+              <em>900/1000</em>
+              <p><span style="width: 90%;" class="-full"></span></p>
+            </div>
+          </li>
+          <li>
+            <span class="stats--headline -mos">MOS Tests:</span>
+            <div class="progressbar">
+              <em>150/1000</em>
+              <p><span style="width: 15%;" class="-low"></span></p>
+            </div>
+          </li>
+          <li>
+            <span class="stats--headline -sms">SMS Tests:</span>
+            <div class="progressbar">
+              <em>1/1000</em>
+              <p><span style="width: 0.1%;" class="-low"></span></p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="login_stats--controls">
+          <a href="#" class="button2 -statistics">Statistics</a>
+          <a href="#" class="button2 -settings"></a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section -default">
+      <div class="base_col">
+
+        <aside class="section--aside">
+          <ul class="aside--menu">
+            <li><a href="#" class="-active">VOIP</a></li>
+            <li><a href="#"> SMS </a></li>
+            <li><a href="#">GENERAL</a></li>
+          </ul>
+        </aside>
+
+        <div class="section--content">
+          <div class="tabs">
+            <ul class="switch_panels first">
+              <li class="active"><a href="#first1">VOIP SETTINGS</a></li>
+              <li class=""><a href="#second1">Add sms template</a></li>
+            </ul>
+
+            <div class="panels">
+              <div class="panel" id="first1">
+                <div class="panel_wrapper -wide">
+                  <div class="voip_settings">
+                    <div class="voip_settings--item">
+                      <label for="label" class="label -small_padding">Config. TRUNK <span class="toolptip"><span>Я тултипчик</span></span></label>
+
+                      <input type="text" id="label" class="input" style="width: 200px;">
+                      <span class="separator">:</span>
+                      <input type="text" class="input" value="" style="width: 80px;">
+
+                      <a href="#" class="button -orange">Save</a>
+
+                      <div class="item--info">
+                        Here you can find different kind of information about settings and config. Thank you!
+                      </div>
+                    </div>
+
+                    <div class="voip_settings--item">
+                      <p class="input-label">
+                        <label for="label3" class="label">Supplier name</label>
+                        <input type="text" id="label3" class="input" style="width: 160px;">
+                      </p>
+                      <p class="input-label">
+                        <label for="label4" class="label">Prefix <span class="toolptip"><span>Я тултипчик</span></span></label>
+                        <input type="text" id="label4" class="input" style="width: 120px;">
+                      </p>
+
+                      <p class="item--controls">
+                        <a href="#" class="button -orange">Add Suplier</a>
+                        <span class="separator">OR</span>
+                        <a href="#" class="button -green">Upload .csv </a>
+                      </p>
+                    </div>
+
+                    <div class="voip_settings--table">
+                      <header>
+                        <p class="checkbox">
+                          <input type="checkbox" id="selectall">
+                          <label for="selectall">Select All</label>
+                        </p>
+                        <a href="#" class="button -small -gray -delete -hide">Delete</a>
+
+                        <p class="search"><input type="text" placeholder="Search prefixes" id="searchPrefixes"></p>
+                      </header>
+
+                      <div class="voip_settings--table_wrapper">
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <p class="checkbox voip_settings--edit_hide">
+                                  <input type="checkbox" id="checkbox2">
+                                  <label for="checkbox2">MTS</label>
+                                </p>
+                                <span class="voip_settings--edit_show -hide">
+                                  <input type="text" class="input" value="MTS">
+                                </span>
+                              </td>
+                              <td>
+                                <span class="voip_settings--edit_hide">3421#</span>
+                                <span class="voip_settings--edit_show -hide">
+                                  <input type="text" class="input" value="3421">
+                                </span>
+                              </td>
+                              <td>
+                                <div class="table--controls voip_settings--edit_hide">
+                                  <a href="#" class="test_connection">Test Connection</a>
+                                  <div class="loading_small -hide"><span class="loading-progress" style="width: 30%;"></span><em>Loading…</em></div>
+                                  <a href="#" class="edit">Edit</a>
+                                  <a href="#" class="delete">Delete</a>
+                                </div>
+
+                                <div class="voip_settings--save voip_settings--edit_show -hide">
+                                  <a href="#" class="button -orange -extra_small">Save</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p class="checkbox voip_settings--edit_hide">
+                                  <input type="checkbox" id="checkbox3">
+                                  <label for="checkbox3">Rostel</label>
+                                </p>
+                                <span class="voip_settings--edit_show -hide">
+                                  <input type="text" class="input" value="Rostel">
+                                </span>
+                              </td>
+                              <td>
+                                <span class="voip_settings--edit_hide">5421#</span>
+                                <span class="voip_settings--edit_show -hide">
+                                  <input type="text" class="input" value="5421">
+                                </span>
+                              </td>
+                              <td>
+                                <div class="table--controls voip_settings--edit_hide">
+                                  <a href="#" class="test_connection">Test Connection</a>
+                                  <div class="loading_small -hide"><span class="loading-progress" style="width: 30%;"></span><em>Loading…</em></div>
+                                  <a href="#" class="edit">Edit</a>
+                                  <a href="#" class="delete">Delete</a>
+                                </div>
+
+                                <div class="voip_settings--save voip_settings--edit_show -hide">
+                                  <a href="#" class="button -orange -extra_small">Save</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p class="checkbox voip_settings--edit_hide">
+                                  <input type="checkbox" id="checkbox4">
+                                  <label for="checkbox4">Orange</label>
+                                </p>
+                                <span class="voip_settings--edit_show -hide">
+                                  <input type="text" class="input" value="Rostel">
+                                </span>
+                              </td>
+                              <td>
+                                <span class="voip_settings--edit_hide">7421#</span>
+                                <span class="voip_settings--edit_show -hide">
+                                  <input type="text" class="input" value="5421">
+                                </span>
+                              </td>
+                              <td>
+                                <div class="table--controls voip_settings--edit_hide">
+                                  <a href="#" class="test_connection">Test Connection</a>
+                                  <div class="loading_small -hide"><span class="loading-progress" style="width: 30%;"></span><em>Loading…</em></div>
+                                  <a href="#" class="edit">Edit</a>
+                                  <a href="#" class="delete">Delete</a>
+                                </div>
+
+                                <div class="voip_settings--save voip_settings--edit_show -hide">
+                                  <a href="#" class="button -orange -extra_small">Save</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p class="checkbox voip_settings--edit_hide">
+                                  <input type="checkbox" id="checkbox5">
+                                  <label for="checkbox5">AT&T</label>
+                                </p>
+                                <span class="voip_settings--edit_show -hide">
+                                  <input type="text" class="input" value="AT&T">
+                                </span>
+                              </td>
+                              <td>
+                                <span class="voip_settings--edit_hide">8421#</span>
+                                <span class="voip_settings--edit_show -hide">
+                                  <input type="text" class="input" value="8421">
+                                </span>
+                              </td>
+                              <td>
+                                <div class="table--controls voip_settings--edit_hide">
+                                  <a href="#" class="test_connection">Test Connection</a>
+                                  <div class="loading_small -hide"><span class="loading-progress" style="width: 30%;"></span><em>Loading…</em></div>
+                                  <a href="#" class="edit">Edit</a>
+                                  <a href="#" class="delete">Delete</a>
+                                </div>
+
+                                <div class="voip_settings--save voip_settings--edit_show -hide">
+                                  <a href="#" class="button -orange -extra_small">Save</a>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel -hide" id="second1">
+                <div class="panel_wrapper -wide">
+                  <div class="voip_settings">
+                    <div class="voip_settings--item -bordered -narrow">
+                      <div class="selections">
+                        <p>
+                          <label for="label" class="label -small_padding">Name</label>
+                          <input type="text" id="label" class="input" placeholder="Binary SMS Template">
+                        </p>
+                        <p class="select">
+                          <label for="" class="label -small_padding">Test type</label>
+                          <select name="" class="fake-select_default">
+                            <option value="1" selected>Московская область</option>
+                            <option value="3">Ростов</option>
+                            <option value="2">Кострома</option>
+                            <option value="4">Санкт-Петербург</option>
+                            <option value="5">Кишинев</option>
+                            <option value="6">Бельцы</option>
+                            <option value="7">Киев</option>
+                            <option value="8">Париж</option>
+                            <option value="9">Вена</option>
+                            <option value="10">Лемберг</option>
+                          </select>
+                        </p>
+                        <p class="select">
+                          <label for="" class="label -small_padding">Adapter instance</label>
+                          <select name="" class="fake-select_default">
+                            <option value="1" selected>Московская область</option>
+                            <option value="3">Ростов</option>
+                            <option value="2">Кострома</option>
+                            <option value="4">Санкт-Петербург</option>
+                            <option value="5">Кишинев</option>
+                            <option value="6">Бельцы</option>
+                            <option value="7">Киев</option>
+                            <option value="8">Париж</option>
+                            <option value="9">Вена</option>
+                            <option value="10">Лемберг</option>
+                          </select>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="voip_settings--item">
+                      <aside class="properties">
+                        <h2>SMS PROPERTIES:</h2>
+                        <ul>
+                          <li><h3>HTTP Send</h3></li>
+                          <li><a href="#binary">Binary</a></li>
+                          <li><a href="#receip_requested">Receip Requested</a></li>
+                          <li><a href="#sender">Sender</a></li>
+                          <li><a href="#udh">UDH</a></li>
+                          <li><a href="#DSCJented">DSCJented</a></li>
+                          <li><a href="#text">Text</a></li>
+
+                          <li><h3>SMS Send Adapter <br>Settings</h3></li>
+                          <li><a href="#dcs">DCS</a></li>
+                          <li><a href="#SMSGR_AppDest">SMSGR_AppDest</a></li>
+                          <li><a href="#SMSGR_AppSrc">SMSGR_AppSrc</a></li>
+                        </ul>
+                      </aside>
+
+                      <div class="template">
+                        <div class="template-wrapper">
+                          <header>
+                            <div class="template--label">Receip Requested <span class="toolptip"><span>Я тултипчик</span></span></div>
+                            <div class="radio_buttons -gray">
+                              <p>
+                                <input type="radio" id="val1" name="radio" checked>
+                                <label for="val1">Yes</label>
+                              </p>
+
+                              <p>
+                                <input type="radio" id="val2" name="radio">
+                                <label for="val2">No</label>
+                              </p>
+                            </div>
+
+                            <a href="#" class="delete">Delete</a>
+                          </header>
+
+                          <div class="template--item -hide" id="sender">
+                            <p class="select" style="width:300px">
+                              <label for="" class="label -small_padding">Sender <span class="toolptip"><span>Я тултипчик</span></span></label>
+                              <select name="" class="fake-select_default">
+                                <option value="1" selected>Московская область</option>
+                                <option value="3">Ростов</option>
+                                <option value="2">Кострома</option>
+                                <option value="4">Санкт-Петербург</option>
+                                <option value="5">Кишинев</option>
+                                <option value="6">Бельцы</option>
+                                <option value="7">Киев</option>
+                                <option value="8">Париж</option>
+                                <option value="9">Вена</option>
+                                <option value="10">Лемберг</option>
+                              </select>
+                            </p>
+                          </div>
+
+                          <div class="template--item -hide" id="binary">
+                            <p style="width:300px">
+                              <label for="templateMsg" class="label -small_padding">Binary <span class="toolptip"><span>Я тултипчик</span></span></label>
+                              <textarea name="name" id="templateMsg" class="input" rows="3"></textarea>
+                            </p>
+                          </div>
+
+                          <div class="template--item -hide" id="receip_requested">
+                            <p style="width:300px">
+                              <label for="receip_requestedInp" class="label -small_padding">Receip Requested <span class="toolptip"><span>Я тултипчик</span></span></label>
+                              <input type="text" class="input" id="receip_requested">
+                            </p>
+                          </div>
+
+                          <div class="template--item -hide" id="udh">
+                            <p style="width:300px">
+                              <label for="templateMsg" class="label -small_padding">UDH <span class="toolptip"><span>Я тултипчик</span></span></label>
+                              <input type="text" class="input">
+                            </p>
+                          </div>
+
+                          <div class="template--item -hide" id="DSCJented">
+                            <p style="width:300px">
+                              <label for="templateMsg" class="label -small_padding">DSCJented <span class="toolptip"><span>Я тултипчик</span></span></label>
+                              <input type="text" class="input">
+                            </p>
+                          </div>
+
+                          <div class="template--item -hide" id="SMSGR_AppDest">
+                            <p style="width:300px">
+                              <label for="templateMsg" class="label -small_padding">SMSGR_AppDest <span class="toolptip"><span>Я тултипчик</span></span></label>
+                              <input type="text" class="input">
+                            </p>
+                          </div>
+
+                          <div class="template--item -hide" id="SMSGR_AppSrc">
+                            <p style="width:300px">
+                              <label for="templateMsg" class="label -small_padding">SMSGR_AppSrc <span class="toolptip"><span>Я тултипчик</span></span></label>
+                              <input type="text" class="input">
+                            </p>
+                          </div>
+
+                          <div class="template--item -hide" id="text">
+                            <p style="width:300px">
+                              <label for="templateMsg" class="label -small_padding">Text <span class="toolptip"><span>Я тултипчик</span></span></label>
+                              <textarea name="name" id="templateMsg" class="input" rows="3"></textarea>
+                            </p>
+                          </div>
+
+                          <div class="template--item -hide" id="dcs">
+                            <p style="width:300px">
+                              <label for="" class="label -small_padding">DCS <span class="toolptip"><span>Я тултипчик</span></span></label>
+                              <select name="" class="fake-select_default">
+                                <option value="1" selected>Московская область</option>
+                                <option value="3">Ростов</option>
+                                <option value="2">Кострома</option>
+                                <option value="4">Санкт-Петербург</option>
+                                <option value="5">Кишинев</option>
+                                <option value="6">Бельцы</option>
+                                <option value="7">Киев</option>
+                                <option value="8">Париж</option>
+                                <option value="9">Вена</option>
+                                <option value="10">Лемберг</option>
+                              </select>
+                            </p>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="template--controls">
+                          <a href="#" class="button -orange">Create Template</a>
+                          <a href="#" class="button -gray_empty">Cancel</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <ul class="footer--menu">
+        <li><a href="#testPopup" class="popupopen">ABOUT</a></li>
+        <li><a href="#testPopup" class="popupopen">FAQ</a></li>
+        <li><a href="#testPopup" class="popupopen">CONTACTS</a></li>
+      </ul>
+
+      <div class="footer--logo">
+        <img src="./assets/images/content/logo.png" alt="" width="47">
+        <p>© 2011-2015 ByPass Systems <br> All rights reserved</p>
+      </div>
+
+      <a href="http://difiz.com" class="footer--difiz">Design by <span>www.difiz.com</span></a>
+    </footer>
+  </div>
+
+  <div id="overlay" class="-hide"></div>
+  <div id="overlay_white" class="-hide"></div>
+  <div id="report"></div>
+
+  <!-- Libs -->
+  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+  <script src="assets/libs/select2/dist/js/select2Mod.min.js"></script>
+	<script src="assets/libs/datatables/media/js/jquery.dataTables.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="assets/scripts/selectTags.js"></script>
+  <script src="assets/scripts/main.js"></script>
+  <script src="assets/scripts/combobox.js"></script>
+  <script src="assets/scripts/countriesPopup.js"></script>
+
+  <script language="JavaScript">
+    $.datepicker.regional['en'] = {
+      closeText: 'Close',
+      currentText: 'Today',
+      done: 'Select',
+      // monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+      // monthNamesShort: ['янв','фев','мар','апр','май','июн', 'июл','авг','сен','окт','ноя','дек'],
+      dateFormatFrom: 'd M',
+      dateFormat: 'd M, yy',
+      firstDay: 1,
+      isRTL: false,
+      changeDate: function (date) {
+        console.log(date);
+      }
+    };
+    $.datepicker.setDefaults($.datepicker.regional['en']);
+
+
+  </script>
+
+  <script src="assets/scripts/datepicker.js"></script>
+
+  <script>
+
+    [].forEach.call($('.audio'), function (el) {
+
+      var $el = $(el);
+      var id = $el.data('id');
+      var color = $el.data('color');
+      var progress = $el.data('progress');
+      var audio = $el.data('audio');
+
+      var wavesurfer = WaveSurfer.create({
+        container: id,
+        waveColor: color,
+        progressColor: progress,
+        barWidth: '1',
+        height: '30',
+        cursorWidth: '0'
+      });
+
+      wavesurfer.on('finish', function () {
+        wavesurfer.stop();
+      });
+
+      wavesurfer.load(audio);
+
+      $el.find('a').on('click', function () {
+        wavesurfer.play();
+      });
+    });
+  </script>
+</body>
+</html>

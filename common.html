@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta charset="UTF-8">
+  <title>ByPass</title>
+  <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
+  <link href="assets/libs/select2/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="assets/styles/svg.css" rel="stylesheet" type="text/css">
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <link rel="icon" type="icon" href="assets/images/content/fav.png">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id="wrapper">
+    <header id="header">
+      <a href="#testPopup" id="logo" class="popupopen"></a>
+
+      <ul class="header--menu">
+        <li><a href="#testPopup" class="popupopen">ABOUT</a></li>
+        <li><a href="#testPopup" class="popupopen">FAQ</a></li>
+        <li><a href="#testPopup" class="popupopen">CONTACTS</a></li>
+      </ul>
+
+      <div class="login--buttons">
+        <a href="#testPopup" class="button -orange -icon -registration popupopen">Registration</a>
+        <a href="#testPopup" class="button -icon -login popupopen">Member Login</a>
+      </div>
+    </header>
+
+    <section class="common">
+      <div class="base_col">
+        <h1 class="headline">Headline h1</h1>
+        <h2 class="headline">Headline h2</h2>
+        <h3 class="headline">Headline h3</h3>
+
+        <form action="" class="form_inline">
+
+          <p><input type="text" class="input" value="Sam Mountain"></p>
+
+          <p>
+            <label for="label3" class="label">Error</label>
+            <input type="text" id="label3" class="input -error" value="Abracadabra">
+          </p>
+
+          <p class="input-label">
+            <label for="label" class="label">Form with label</label>
+            <input type="text" id="label" class="input" placeholder="Sam Difiz">
+          </p>
+
+          <p class="input-label">
+            <label for="label1" class="label">Double form</label>
+            <input type="text" id="label1" class="input" value="Num">
+            <input type="text" id="label2" class="input" value="Sam Mountain">
+          </p>
+
+          <p class="select" style="width:250px">
+            <label for="" class="label">DCSJented</label>
+            <select name="" class="fake-select_default">
+              <option value="1" selected>Московская область</option>
+              <option value="3">Ростов</option>
+              <option value="2">Кострома</option>
+              <option value="4">Санкт-Петербург</option>
+              <option value="5">Кишинев</option>
+              <option value="6">Бельцы</option>
+              <option value="7">Киев</option>
+              <option value="8">Париж</option>
+              <option value="9">Вена</option>
+              <option value="10">Лемберг</option>
+            </select>
+          </p>
+
+          <p class="select_round" style="width:200px">
+            <label for="" class="label">DCSJented</label>
+            <select name="" class="fake-select_default">
+              <option value="1" selected>Московская область</option>
+              <option value="3">Ростов</option>
+              <option value="2">Кострома</option>
+              <option value="4">Санкт-Петербург</option>
+              <option value="5">Кишинев</option>
+              <option value="6">Бельцы</option>
+              <option value="7">Киев</option>
+              <option value="8">Париж</option>
+              <option value="9">Вена</option>
+              <option value="10">Лемберг</option>
+            </select>
+          </p>
+
+          <p class="checkbox">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">I agree to the <a href="#">ByPass Business</a> Agreements and Terms</label>
+          </p>
+
+          <p><a href="#" class="button">Submit</a></p>
+          <p><a href="#" class="button -orange -medium">Submit</a></p>
+          <p><a href="#" class="button -orange -big">Submit</a></p>
+          <p><a href="#" class="button -orange -big -wide">Submit</a></p>
+          <p><a href="#" class="button -orange -big -arrow">Submit</a></p>
+        </form>
+
+        <p class="toolptip"><span>Я тултипчик <br> И тут ещё очень много текста</span></p>
+
+        <p class="rating">
+					<i class="-active" style="width: 73%;">
+						<i class="rating--bg"></i>
+					</i>
+				</p>
+
+        <p class="rating -big">
+					<i class="-active" style="width: 73%;">
+						<i class="rating--bg"></i>
+					</i>
+				</p>
+
+        <div class="radio_buttons">
+          <p>
+            <input type="radio" id="val1" name="radio" checked>
+            <label for="val1">Первый вариант</label>
+          </p>
+
+          <p>
+            <input type="radio" id="val2" name="radio">
+            <label for="val2">Второй вариант</label>
+          </p>
+
+          <p>
+            <input type="radio" id="val3" name="radio">
+            <label for="val3">Третий вариант</label>
+          </p>
+        </div>
+        <br><br><br><br>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="popup -popuphide" id="testPopup">
+    <a href="#" class="close"></a>
+    <div>
+      <h2>Coming soon</h2>
+      <p>We will soon open</p>
+    </div>
+  </div>
+
+  <div id="overlay" class="-hide"></div>
+  <div id="report"></div>
+
+  <!-- Libs -->
+  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+  <script src="assets/libs/select2/dist/js/select2.min.js"></script>
+	<script src="assets/libs/datatables/media/js/jquery.dataTables.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="assets/scripts/selectTags.js"></script>
+  <script src="assets/scripts/main.js"></script>
+  <script src="assets/scripts/combobox.js"></script>
+  <script src="assets/scripts/countriesPopup.js"></script>
+</body>
+</html>
